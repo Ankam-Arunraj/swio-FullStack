@@ -10,30 +10,30 @@ function Home() {
   };
   return (
     <div className="HomeContainer"  >
-      <h1 style={{ paddingTop: "2%", fontSize: "250px", fontWeight: "2rem" }}>Sleeve 2</h1>
-      <h2 style={{ fontSize: "50px", fontWeight: "bolder" }}><b>The ultimate music accessory for your Mac.</b></h2>
-      <h2>Sleeve sits on the desktop, displaying and controlling the music you’re</h2>
-      <h2>currently playing in <img src="https://replay.software/sleeve/images/AppMusic.png" />Apple Music, <img src="https://replay.software/sleeve/images/AppSpotify.png" /> Spotify, and <img src="https://replay.software/sleeve/images/AppDoppler.png" /> Doppler.</h2>
+      <h1 style={{ paddingTop: "2%", fontSize: "90px", fontWeight: "2rem" }}>Sleeve 2</h1>
+      <h2 style={{ fontSize: "30px", fontWeight: "1rem" }}><b>The ultimate music accessory for your Mac.</b></h2>
+      <h3>Sleeve sits on the desktop, displaying and controlling the music you’re</h3>
+      <h4>currently playing in <img src="https://replay.software/sleeve/images/AppMusic.png" style={{height:"35px" , width:"35px " , padding:"5px"}} />Apple Music, <img src="https://replay.software/sleeve/images/AppSpotify.png" style={{height:"35px" , width:"35px", padding:"5px"}}/> Spotify, and <img src="https://replay.software/sleeve/images/AppDoppler.png" style={{height:"35px" , width:"35px", padding:"5px"}}/> Doppler.</h4>
       <div>
         <button className="buttons"><i class="fa-brands fa-apple"></i> <b>Mac App Store </b></button>
         <button className="buttons" style={{ marginLeft: "10px" }}> <b>Buy Directly</b> <button style={{ borderRadius: "10px" }}> <b>$5.99</b></button></button>
       </div>
       <div>
-        <h1 style={{ fontSize: "60px", fontWeight: "1rem", marginTop: "20px" }}>Themes. Unlimited themes.</h1>
+        <h1 style={{ fontSize: "60px", fontWeight: "1rem", marginTop: "20px", marginTop:"5%" }}>Themes. Unlimited themes.</h1>
         <h3>Themes in Sleeve make creating and switching between customizations easy. Share your own creations with friends and install as many themes as you like with just a double-click.</h3>
         <div className="image-content" >
           <div className="image-card-content">
-            <img src="https://i.pinimg.com/736x/c3/7a/f1/c37af139600de0ed5d5a89543830ea79.jpg" width="200px" height="200px" /><br></br>
+            <img src="https://i.pinimg.com/736x/c3/7a/f1/c37af139600de0ed5d5a89543830ea79.jpg" width="200px" height="240px" /><br></br>
             <b>Eternal Sunshine</b><h5> Forgotten Feels</h5><h6>Slow Magic</h6>
           </div>
 
           <div className="image-card-content">
-            <img src="https://i.ytimg.com/vi/zHro3kno7os/sddefault.jpg" width="200px" height="200px" /><br></br><i class="fa-solid fa-backward-step"></i> <i class="fa-solid fa-pause"></i> <i class="fa-solid fa-forward-step"></i><h6>Are You Listening
+            <img src="https://i.ytimg.com/vi/zHro3kno7os/sddefault.jpg" width="200px" height="230px"  padding-top="14%" /><br></br><h6>Are You Listening
               How To Be Human
               Chelsea Cutler</h6>
           </div>
           <div className="image-card-content">
-            <img src="https://i.ytimg.com/vi/LdlC3XLRiRE/maxresdefault.jpg" width="200px" height="200px" /><h6><b>Creation Comes Alive</b></h6>
+            <img src="https://i.ytimg.com/vi/LdlC3XLRiRE/maxresdefault.jpg" width="200px" height="250px" /><h6><b>Creation Comes Alive</b></h6>
             <h6>Petit Biscuit</h6>
           </div>
         </div>
@@ -43,10 +43,10 @@ function Home() {
           <div className="textcardcontainer">
             <div className="textcard">
               <div>
-                <h4><b>Change it up</b></h4>
-                <h6> Switch between themes with just a click.</h6>
+                <h3><b>Change it up</b></h3>
+                <h5> Switch between themes with just a click.</h5>
 
-                <h6>Modify the built-in themes or create your own using Sleeve’s extensive preferences.</h6>
+                <h5>Modify the built-in themes or create your own using Sleeve’s extensive preferences.</h5>
               </div>
               <div>
                 <img src="https://replay.software/sleeve/images/ThemeUIDark.png" className="musicimg"></img>
@@ -58,11 +58,11 @@ function Home() {
           <div className="textcardcontainer">
             <div className="textcard">
               <div>
-                <h4>
-                  <b>Shareable</b> </h4>
-                <h6>Export your themes and share them with friends using the handy new Sleeve Theme file format.</h6>
+                <h3>
+                  <b>Shareable</b> </h3>
+                <h5>Export your themes and share them with friends using the handy new Sleeve Theme file format.</h5>
 
-                <h6>Install themes from anywhere with a double-click or a drag and drop.</h6>
+                <h5>Install themes from anywhere with a double-click or a drag and drop.</h5>
               </div>
               <div>
                 <img src="https://replay.software/sleeve/images/ThemeExportDark.png" width={"200px"} height={"200px"} ></img>
@@ -91,8 +91,8 @@ function Home() {
         </div>
       </div>
 
-      <div onClick={() => handleSetActiveSection('Artwork')}>
-        <h2>Artwork</h2>
+      <div onClick={() => handleSetActiveSection('Artwork')} style={{marginTop:"6%"}}>
+        <h2 ><button type="button" class="btn btn-dark" style={{fontSize:"40px" , borderRadius:"10px"}}>Artwork</button></h2>
         {/* Artwork section content */}
         {activeSection === 'Artwork' && (
           <div className="scrollableSection">
@@ -114,8 +114,8 @@ function Home() {
           </div>
         )}
       </div>
-      <div onClick={() => handleSetActiveSection('Typography')}>
-        <h2>Typography</h2>
+      <div onClick={() => handleSetActiveSection('Typography')} >
+        <h2><button type="button" class="btn btn-dark" style={{fontSize:"40px" , borderRadius:"10px"}}>Typography</button></h2>
         {/* Typography section content */}
         {activeSection === 'Typography' && (
           <div className="scrollableSection">
@@ -140,7 +140,7 @@ function Home() {
         )}
       </div>
       <div onClick={() => handleSetActiveSection('Interface')}>
-        <h2>Interface</h2>
+        <h2><button type="button" class="btn btn-dark" style={{fontSize:"40px" , borderRadius:"10px"}}>Interface</button></h2>
         {/* Interface section content */}
         {activeSection === 'Interface' && (
           <div className="scrollableSection">

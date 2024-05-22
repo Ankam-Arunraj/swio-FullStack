@@ -3,6 +3,9 @@
     color: white;
     padding: 10px;
   }
+  .navbar-brand{
+    padding-left: 2%;
+  }
   
   .navbar .navbar-brand {
     font-size: 24px;
