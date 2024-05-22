@@ -1,26 +1,21 @@
-import React from 'react';
-import SleeveLogo from './pages/SleeveLogo';
-import Themes from './pages/Themes';
-import Customization from './pages/Customization';
-import Integrations from './pages/Integrations';
-// import KeyboardShortcuts from './KeyboardShortcuts';
-// import Support from './Support';
-// import App from './App'
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Payment from './components/Payment/Payment';
+import Transactions from './components/Transactions/Transactions';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <SleeveLogo />
-        <h1>The ultimate music accessory for your Mac</h1>
-      </header>
-      <main>
-        <Themes />
-        <Customization />
-        <Integrations />
-        <SleeveLogo />
-      </main>
-      {/* <Support /> */}
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="payment" element={<Payment />} />
+          <Route path="transactionlist" element={<Transactions />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
