@@ -68,6 +68,13 @@
 .image-card-content{
   padding-top: 15%;
 }
+.Home-Image{
+  /* width:50% ; */
+  justify-content: center;
+  padding-top: 50px;
+  background-color: black;
+  color: black;
+}
 
 
 .textcontent{

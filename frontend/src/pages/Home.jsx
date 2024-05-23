@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import  sleeveImg from './sleeveImgg.jpg';
 
 function Home() {
 
@@ -8,8 +8,13 @@ function Home() {
   const handleSetActiveSection = (section) => {
     setActiveSection(section);
   };
+
+
   return (
     <div className="HomeContainer"  >
+      <div className="Home-Image">
+        <img src={sleeveImg} alt="" />
+      </div>
       <h1 style={{ paddingTop: "2%", fontSize: "90px", fontWeight: "2rem" }}>Sleeve 2</h1>
       <h2 style={{ fontSize: "30px", fontWeight: "1rem" }}><b>The ultimate music accessory for your Mac.</b></h2>
       <h3>Sleeve sits on the desktop, displaying and controlling the music you’re</h3>

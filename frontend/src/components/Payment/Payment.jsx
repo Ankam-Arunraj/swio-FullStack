@@ -6,11 +6,36 @@ function Payment() {
   const [expiryDate, setExpiryDate] = useState('');
   const [cvv, setCvv] = useState('');
   const [amount, setAmount] = useState('');
+  
 
-  const handlePayment = (e) => {
+  const handlePayment = async (e) => {
     e.preventDefault();
-    // Implement payment processing logic here
-    console.log('Payment submitted', { cardNumber, expiryDate, cvv, amount });
+
+    try {
+      const response = await fetch('/api/payments/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          cardNumber,
+          expiryDate,
+          cvv,
+          amount,
+        }),
+      });
+
+      if (response.ok) {
+        console.log('Payment submitted successfully');
+        // Handle success, such as showing a success message or redirecting
+      } else {
+        console.error('Failed to submit payment');
+        // Handle error, such as showing an error message
+      }
+    } catch (error) {
+      console.error('Error submitting payment', error);
+      // Handle error, such as showing an error message
+    }
   };
 
   return (

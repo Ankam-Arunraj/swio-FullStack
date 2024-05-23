@@ -2,14 +2,19 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const paymentRoutes = require('./routes/paymentPage');
+const cors = require('cors');
 
 const app = express();
-const cors = require('cors')
-app.use(cors())
+// const cors = require('cors')
+app.use(cors());
 app.use(bodyParser.json());
 
 
-app.use('/api/payments', paymentRoutes);
+app.use('/api/payments/submit', paymentRoutes);
+
+app.get('/', (req, res) => {
+  res.send('Hello, World! This is the root endpoint.');
+});
 
 
 app.use((err, req, res, next) => {
